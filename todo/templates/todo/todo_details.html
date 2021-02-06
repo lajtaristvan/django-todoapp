@@ -11,14 +11,8 @@
         Hello {{ request.user.username }}
     {% else %}
         Hello anonymous user   
-    {% endif %}
-
-    <a href="/create">Create a todo</a>
-    
-    <ul>
-        {% for todo in todo_list %}
-            <li><a href="/{{ todo.id }}">{{ todo.name }}, it's due {{ todo.due_date }}</a></li>            
-        {% endfor %}
-    </ul>    
+    {% endif %}  
+    The todo name is: {{ todo.name }}  
+     The due date is: {{ todo.due_date }}
 </body>
 </html>
